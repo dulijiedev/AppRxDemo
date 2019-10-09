@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion build_version.compileSdkVersion
+    buildToolsVersion build_version.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion build_version.minSdkVersion
+        targetSdkVersion build_version.targetSdkVersion
+        versionCode build_version.versionCode
+        versionName build_version.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //包含rxjava
+    api libs.rxbinding
+    api libs.rxbinding_core
+    api libs.rxbinding_appcompat
+
+    api libs.retrofit
+//    api libs.rxjava
+    api libs.retrofit_gson
+    api libs.retrofit_rxjava
+    api libs.okhttp_logging
+    api libs.converter_scalars
+
+    api libs.rxkotlin
+    api libs.arch_comp_extension
+    kapt libs.arch_comp_compiler
+
+    api libs.kotlin_stdlib7
+    api libs.support_v7
+    api libs.support_compat
+    api libs.constraintlayout
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

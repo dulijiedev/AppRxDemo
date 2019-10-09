@@ -1,0 +1,133 @@
+ext {
+
+    build_version = [
+            compileSdkVersion: 28,
+            buildToolsVersion: '29.0.1',
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : '1.0.0'
+    ]
+
+    plugin_versions = [
+            gradle_version   : '3.4.2',
+            kotlin_version   : '1.3.41',
+            greenrobot_plugin: '3.2.2',
+    ]
+
+    versions = [
+            kotlin_version       : '1.3.41',
+            androidx             : '1.1.0',
+            support              : '1.0.0',
+            arch_comp_lifecycle  : '2.0.0-rc01',
+            arch_comp_persistence: '2.0.0-rc01',
+            arch_comp_navigation : '1.0.0-alpha07',
+            arch_comp_paging     : '2.0.0-rc01',
+            material             : '1.0.0-rc01',
+            recyclerview         : '1.0.0',
+            flexbox              : '1.1.0',
+            constraintlayout     : '1.1.3',
+
+            retrofit             : '2.4.0',
+            okhttp               : '3.11.0',
+            glide                : '4.8.0',
+
+            rxjava               : '2.1.14',
+            rxkotlin             : '2.4.0',
+            rxandroid            : '2.1.0',
+            rxbinding            : '3.0.0',
+            rxcache              : '1.8.3-2.x',
+            autodispose          : '1.0.0-RC2',
+
+            refresh_layout       : '1.0.5.1',
+            base_adapter         : '2.9.21',
+
+            //今日头条适配
+            autosize             : '1.1.0',
+            //沉浸式
+            immersionbar         : '2.3.3-beta09',
+
+            retrofit_fastjson    : '2.2.0',
+
+            google_gson          : '2.8.1',
+            greenrobot           : '3.2.2',
+            converter_salars     : '2.0.0',
+    ]
+
+    build_plugin = [
+            android_gradle   : [group: 'com.android.tools.build', name: 'gradle', version: plugin_versions.gradle_version],
+            kotlin_gradle    : [group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: plugin_versions.kotlin_version],
+            kotlin_extensions: [group: 'org.jetbrains.kotlin', name: 'kotlin-android-extensions', version: plugin_versions.kotlin_version],
+            greenrobot       : [group: 'org.greenrobot', name: 'greendao-gradle-plugin', version: plugin_versions.greenrobot_plugin],
+    ]
+    libs = [
+            support_v7             : [group: 'androidx.appcompat', name: 'appcompat', version: versions.androidx],
+            support_v4             : [group: 'androidx.legacy', name: 'legacy-support-v4', version: versions.support],
+            support_v13            : [group: 'androidx.legacy', name: 'legacy-support-v13', version: versions.support],
+            support_compat         : [group: 'androidx.core', name: 'core', version: versions.support],
+            design                 : [group: 'com.google.android.material', name: 'material', version: versions.material],
+            recyclerview           : [group: 'androidx.recyclerview', name: 'recyclerview', version: versions.recyclerview],
+            cardview               : [group: 'androidx.cardview', name: 'cardview', version: versions.support],
+            annotations            : [group: 'androidx.annotation', name: 'annotation', version: versions.support],
+
+            flexbox                : [group: 'com.google.android', name: 'flexbox', version: versions.flexbox],
+
+            arch_comp_extension    : [group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: versions.arch_comp_lifecycle],
+            arch_comp_compiler     : [group: 'androidx.lifecycle', name: 'lifecycle-compiler', version: versions.arch_comp_lifecycle],
+            arch_comp_livedata     : [group: 'androidx.lifecycle', name: 'lifecycle-livedata', version: versions.arch_comp_lifecycle],
+            arch_comp_viewmodel    : [group: 'androidx.lifecycle', name: 'lifecycle-viewmodel', version: versions.arch_comp_lifecycle],
+
+            arch_comp_navigation   : [group: 'android.arch.navigation', name: 'navigation-fragment-ktx', version: versions.arch_comp_navigation],
+            arch_comp_navigation_ui: [group: 'android.arch.navigation', name: 'navigation-ui-ktx', version: versions.arch_comp_navigation],
+
+            arch_comp_paging       : [group: 'androidx.paging', name: 'paging-runtime', version: versions.arch_comp_paging],
+            arch_comp_paging_rxjava: [group: 'androidx.paging', name: 'paging-rxjava2', version: versions.arch_comp_paging],
+
+            arch_comp_room         : [group: 'androidx.room', name: 'room-runtime', version: versions.arch_comp_persistence],
+            arch_comp_room_compiler: [group: 'androidx.room', name: 'room-compiler', version: versions.arch_comp_persistence],
+            arch_comp_room_rxjava  : [group: 'androidx.room', name: 'room-rxjava2', version: versions.arch_comp_persistence],
+            arch_comp_room_test    : [group: 'androidx.room', name: 'room-testing', version: versions.arch_comp_persistence],
+            arch_comp_test         : [group: 'androidx.arch.core', name: 'core-testing', version: versions.arch_comp_lifecycle],
+
+            kotlin_stdlib7         : [group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk7', version: versions.kotlin_version],
+
+            kotlin_stdlib8         : [group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8', version: versions.kotlin_version],
+
+            glide                  : [group: 'com.github.bumptech.glide', name: 'glide', version: versions.glide],
+            glide_compiler         : [group: 'com.github.bumptech.glide', name: 'compiler', version: versions.glide],
+
+            okhttp                 : [group: 'com.squareup.okhttp3', name: 'okhttp', version: versions.okhttp],
+            okhttp_logging         : [group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: versions.okhttp],
+
+            retrofit               : [group: 'com.squareup.retrofit2', name: 'retrofit', version: versions.retrofit],
+            retrofit_gson          : [group: 'com.squareup.retrofit2', name: 'converter-gson', version: versions.retrofit],
+            retrofit_rxjava        : [group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: versions.retrofit],
+            retrofit_fastjson      : [group: 'org.ligboy.retrofit2', name: 'converter-fastjson-android', version: versions.retrofit_fastjson],
+            converter_scalars      : [group: 'com.squareup.retrofit2', name: 'converter-scalars', version: versions.retrofit],
+
+            rxjava                 : [group: 'io.reactivex.rxjava2', name: 'rxjava', version: versions.rxjava],
+            rxkotlin               : [group: 'io.reactivex.rxjava2', name: 'rxkotlin', version: versions.rxkotlin],
+            rxandroid              : [group: 'io.reactivex.rxjava2', name: 'rxandroid', version: versions.rxandroid],
+
+            rxbinding              : [group: 'com.jakewharton.rxbinding3', name: 'rxbinding', version: versions.rxbinding],
+            rxbinding_core         : [group: 'com.jakewharton.rxbinding3', name: 'rxbinding-core', version: versions.rxbinding],
+            rxbinding_appcompat    : [group: 'com.jakewharton.rxbinding3', name: 'rxbinding-appcompat', version: versions.rxbinding],
+
+            rxpermissions          : [group: 'com.github.tbruyelle', name: 'rxpermissions', version: '0.10.2'],
+
+            refresh_layout         : [group: 'com.scwang.smartrefresh', name: 'SmartRefreshLayout', version: versions.refresh_layout],
+
+            constraintlayout       : [group: 'androidx.constraintlayout', name: 'constraintlayout', version: versions.constraintlayout],
+
+            base_adapter           : [group: 'com.github.CymChad', name: 'BaseRecyclerViewAdapterHelper', version: versions.base_adapter],
+
+            autosize               : [group: 'me.jessyan', name: 'autosize', version: versions.autosize],
+
+            eventbus               : [group: 'org.greenrobot', name: 'eventbus', version: versions.eventbus],
+
+            google_gson            : [group: 'com.google.code.gson', name: 'gson', version: versions.google_gson],
+
+            greendao               : [group: 'org.greenrobot', name: 'greendao', version: versions.greenrobot],
+    ]
+
+}

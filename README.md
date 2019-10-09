@@ -5,7 +5,7 @@
 
 Retrofit2+Rxjava2+DataBinding+ViewModel+Lifecycle
 
-```css
+```
 allprojects {
 		repositories {
 			...
@@ -14,7 +14,7 @@ allprojects {
 	}
 ```
 
-```css
+```
 dependencies {
 	        implementation 'com.github.sdohubs:AppRxDemo:v1.0.0'
 	}

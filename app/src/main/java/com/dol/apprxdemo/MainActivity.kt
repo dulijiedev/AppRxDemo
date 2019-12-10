@@ -1,5 +1,6 @@
 package com.dol.apprxdemo
 
+import android.content.Intent
 import com.dol.apprxdemo.databinding.ActivityMainBinding
 import com.dol.apprxdemo.vm.MainVm
 import com.dol.baselib.BaseInjectAt
@@ -16,9 +17,15 @@ class MainActivity : BaseInjectAt<ActivityMainBinding, MainVm>() {
 
     override fun initData() {
         super.initData()
-        tv_test.setOnClickListener{
-            viewModel?.destroyScope()
+        tv_test.setOnClickListener {
+            startActivity(Intent(this@MainActivity, TestAt::class.java))
         }
+
+//        val view = LayoutInflater.from(context).inflate(R.layout.prepare_head_view, null, false)
+//        val bindingHead = DataBindingUtil.bind<PrepareHeadViewBinding>(view)
+//        bindingHead?.viewModel = initViewModel()
+//        bindingHead?.setLifecycleOwner(this)
+//        viewModel?.adapter?.addHeaderView(view)
     }
 
 }

@@ -3,6 +3,7 @@ package com.dol.baselib.utils
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
+import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
 /**

@@ -17,4 +17,8 @@ class BaseResponse<T> {
     override fun toString(): String {
         return "BaseResponse(status:'$status',msg:'$msg', data:'$data')"
     }
+
+    fun transform() : Optional<T>{
+        return Optional(data)
+    }
 }

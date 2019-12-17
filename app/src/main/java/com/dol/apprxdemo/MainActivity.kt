@@ -1,6 +1,8 @@
 package com.dol.apprxdemo
 
 import android.content.Intent
+import android.util.Log
+import androidx.lifecycle.Observer
 import com.dol.apprxdemo.databinding.ActivityMainBinding
 import com.dol.apprxdemo.vm.MainVm
 import com.dol.baselib.BaseInjectAt
@@ -26,6 +28,18 @@ class MainActivity : BaseInjectAt<ActivityMainBinding, MainVm>() {
 //        bindingHead?.viewModel = initViewModel()
 //        bindingHead?.setLifecycleOwner(this)
 //        viewModel?.adapter?.addHeaderView(view)
+    }
+
+    override fun initViewObservable() {
+        super.initViewObservable()
+        viewModel?.updateValue?.observe(this, Observer {
+            Log.d("DLJ","${it?.needUpdate()?.byForce()}")
+            Log.d("DLJ","${it?.needUpdate()?.byForce()}")
+            Log.d("DLJ","${it?.needUpdate()?.ipaUrl}")
+            Log.d("DLJ","${it?.needUpdate()?.to}")
+
+            tv_test.text="${it?.needUpdate()?.byForce()}\n${it?.needUpdate()?.ipaUrl}\n${it?.needUpdate()?.to}"
+        })
     }
 
 }

@@ -33,7 +33,7 @@ fun <T> handle_result(): ObservableTransformer<BaseResponse<T>, Optional<T>> {
                 if(it.success){
                     createHttpData(it.transform())
                 }else{
-                    Observable.error(ServerException(it.status,it.msg))
+                    Observable.error(ServerException(it.code,it.msg))
                 }
             }
     }

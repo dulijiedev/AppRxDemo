@@ -52,6 +52,9 @@ ext {
             google_gson          : '2.8.1',
             greenrobot           : '3.2.2',
             converter_salars     : '2.0.0',
+
+            //AppUpdate
+            app_update           : '2.1.0',
     ]
 
     build_plugin = [
@@ -59,6 +62,7 @@ ext {
             kotlin_gradle    : [group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: plugin_versions.kotlin_version],
             kotlin_extensions: [group: 'org.jetbrains.kotlin', name: 'kotlin-android-extensions', version: plugin_versions.kotlin_version],
             greenrobot       : [group: 'org.greenrobot', name: 'greendao-gradle-plugin', version: plugin_versions.greenrobot_plugin],
+            kotlin_noarg           : [group: 'org.jetbrains.kotlin', name: 'kotlin-noarg', version: plugin_versions.kotlin_version],
     ]
     libs = [
             support_v7             : [group: 'androidx.appcompat', name: 'appcompat', version: versions.androidx],
@@ -128,6 +132,10 @@ ext {
             google_gson            : [group: 'com.google.code.gson', name: 'gson', version: versions.google_gson],
 
             greendao               : [group: 'org.greenrobot', name: 'greendao', version: versions.greenrobot],
+
+            app_update               : [group: 'com.azhon', name: 'appupdateX', version: versions.app_update],
+
+
     ]
 
 }

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/baseui/baseui.iml" filepath="$PROJECT_DIR$/baseui/baseui.iml" />
       <module fileurl="file://$PROJECT_DIR$/networklib/networklib.iml" filepath="$PROJECT_DIR$/networklib/networklib.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxlifecycle/rxlifecycle.iml" filepath="$PROJECT_DIR$/rxlifecycle/rxlifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xversion/xversion.iml" filepath="$PROJECT_DIR$/xversion/xversion.iml" />
     </modules>
   </component>
 </project>

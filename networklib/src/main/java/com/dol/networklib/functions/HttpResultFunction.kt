@@ -16,7 +16,7 @@ class HttpResultFunction<T> : Function<BaseResponse<T>, BaseResponse<T>> {
             Log.e(TAG, "${t.toString()}")
         }
         if (!t.success) {
-            throw GeneralException(t.status, t.msg)
+            throw GeneralException(t.code, t.msg)
         }
         return t
     }

@@ -43,12 +43,12 @@ class ObservableLife<T>(val upStream: Observable<T>, scope: Scope, onMain: Boole
     override fun subscribe(observer: Observer<in T>) {
         ObjectHelper.requireNonNull(observer, "observer is null")
         try {
-            val observer = RxJavaPlugins.onSubscribe(upStream, observer)
+            val observer1 = RxJavaPlugins.onSubscribe(upStream, observer)
             ObjectHelper.requireNonNull(
-                observer,
+                observer1,
                 "The RxJavaPlugins.onSubscribe hook returned a null Observer. Please change the handler provided to RxJavaPlugins.setOnObservableSubscribe for invalid null returns. Further reading: https://github.com/ReactiveX/RxJava/wiki/Plugins"
             )
-            subscribeActual(observer)
+            subscribeActual(observer1)
         } catch (e: NullPointerException) {
             throw e
         } catch (e: Throwable) {

@@ -17,7 +17,7 @@ data class AppUpdateParams(
     var modified: String,
     var phoneType: Int,
     var saasId: String,
-    var updateInformation: String,
+    var updateInformation: String?="更新内容",
     var versionCode: Int,
     var versionName: String
 )

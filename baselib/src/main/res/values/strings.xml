@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">baselib</string>
+    <string name="please_set_version">请设置版本号（VersionBean）</string>
 </resources>

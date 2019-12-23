@@ -1,1 +1,1 @@
-include ':app', ':networklib', ':rxlifecycle', ':baseui', ':baselib', ':xversion'
+include ':app', ':networklib', ':rxlifecycle', ':baseui', ':baselib', ':xversion', ':appupdate'

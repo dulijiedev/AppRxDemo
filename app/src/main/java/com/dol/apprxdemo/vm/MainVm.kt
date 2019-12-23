@@ -3,20 +3,15 @@ package com.dol.apprxdemo.vm
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.MediatorLiveData
-import com.azhon.appupdate.utils.ApkUtil
 import com.dol.apprxdemo.api.getAppVersions
+import com.dol.appupdate.utils.ApkUtil
 import com.dol.baselib.utils.SingleLiveEvent
 import com.dol.baselib.utils.UIUtils
-import com.dol.rxlifecycle.life
 import com.dol.rxlifecycle.lifeOnMain
 import com.dol.rxlifecycle.scopes.ScopeViewModel
 import com.update.xversion.VersionBean
 import com.update.xversion.VersionControl
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
-import io.reactivex.schedulers.Schedulers
-import java.util.concurrent.TimeUnit
 
 /**
  * Created by dlj on 2019/9/29.
@@ -45,6 +40,10 @@ class MainVm(application: Application) : ScopeViewModel(application) {
 //                Log.e("DLJ", "MainVm:-Consumer->$it")
 //            })
 
+
+    }
+
+    fun getVersions(){
         getAppVersions()
             .lifeOnMain(this)
             .subscribe(Consumer{
@@ -52,10 +51,12 @@ class MainVm(application: Application) : ScopeViewModel(application) {
                     VersionBean(ApkUtil.getVersionName(UIUtils.getContext())),
                     VersionBean(it.get().versionName),
                     VersionBean(ApkUtil.getVersionName(UIUtils.getContext())),
-                    it.get().updateInformation,
+                    /* it.get().updateInformation*/"更新内容",
                     it.get().downloadAddress
                 )
                 updateValue.value=version
+            }, Consumer {
+                Log.d("DLJ","error->${it.message}")
             })
     }
 

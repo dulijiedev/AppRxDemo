@@ -40,6 +40,6 @@ dependencies {
     implementation project(':baseui')
     implementation project(':baselib')
     implementation project(':rxlifecycle')
-    implementation project(':xversion')
+    implementation project(':appupdate')
 
 }

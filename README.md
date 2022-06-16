@@ -15,7 +15,7 @@ allprojects {
 
 
 dependencies {
-	implementation 'com.github.sdohubs:AppRxDemo:v1.0.0'
+	 implementation 'com.github.dulijiedev:AppRxDemo:v1.0.0'
 }
 
 
